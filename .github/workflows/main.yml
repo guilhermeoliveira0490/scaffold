@@ -1,19 +1,23 @@
 name: Python application test whit Github Action
 on: [push]
-with:
-    python-version: 3.7
-    
-        name:
-              run: |
-                        make install
-        name: Link with Pylint
-               run: |
-                       make lint
-        name: Test with Pytest
-              run: |
-                        make test
-        name: Format code with Python black
-                run: |
-                       make format
-          
-        
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+       - uses: actions/checkout@v1
+       - name: Set up Python 3
+       uses: actions/setup-python@v1
+       with:
+           python-version: 3
+        - name: Install dependencies
+        run: |
+          make install
+        - name: Link with Pylint
+        run: |
+          make lint
+        - name: Test with Pytest
+        run: |
+          make test
+        - name: Format code with Python black
+        run: |
+          make format
