@@ -7,19 +7,19 @@ jobs:
     uses: actions/checkout@v2
     name: Set up Python 3.8
     uses: actions/setup-python@v2
-      with:
-        python-version: 3.8
-    name: Install dependencies
-      run: |
-        make install
-    name: Link with Pylint
+   with:
+    python-version: 3.8
+      name: Install dependencies
+        run: |
+          make install
+      name: Link with Pylint
         run: |
           make lint
-    name: Test with Pytest
+      name: Test with Pytest
         run: |
           make test
-     name: Format code with Python black
-          run: |
+      name: Format code with Python black
+        run: |
           make format
           
         
