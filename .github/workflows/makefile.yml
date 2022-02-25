@@ -22,6 +22,4 @@ jobs:
       
     - name: Run check
       run: make test
-      
-    - name: format  
-      run: make format
+
