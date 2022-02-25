@@ -2,7 +2,8 @@ name: Python application test whit Github Action
 on: [push]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs:
+          using: "Makefile"
     steps:
        uses: actions/setup-python@v1
        with:
