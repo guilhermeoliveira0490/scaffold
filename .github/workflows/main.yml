@@ -3,7 +3,7 @@ on: [push]
 with:
     python-version: 3.7
     
-        name: Install requeriment
+        name:
               run: |
                         make install
         name: Link with Pylint
