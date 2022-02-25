@@ -1,19 +1,19 @@
 name: Python application test whit Github Action
 on: [push]
-jobs:
-       with:
-           python-version: 3.7
-        name: Install dependencies
-        run: |
-          make install
+with:
+    python-version: 3.7
+    
+        name: Install requeriment
+              run: |
+                        make install
         name: Link with Pylint
-        run: |
-          make lint
+               run: |
+                       make lint
         name: Test with Pytest
-        run: |
-          make test
+              run: |
+                        make test
         name: Format code with Python black
-        run: |
-          make format
+                run: |
+                       make format
           
         
